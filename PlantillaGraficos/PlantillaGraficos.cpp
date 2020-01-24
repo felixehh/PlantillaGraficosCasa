@@ -15,13 +15,20 @@
 using namespace std;
 
 void dibujarPoligono() {
-	glBegin(GL_POLYGON);
+	glBegin(GL_QUADS);
 	glColor3f(0.4f, 0.9f, 0.0f);
 
-	glVertex3f(0.0f, 0.0f, 0.0f);
-	glVertex3f(0.0f, 0.5f, 0.0f);
-	glVertex3f(0.2f, 0.3f, 0.0f);
-	glVertex3f(0.0f, -0.4f, 0.0f);
+	glVertex3f(1.0f, -0.4f, 0.0f);
+	glVertex3f(-1.0f, -0.4f, 0.0f);
+	glVertex3f(-1.0f, -1.0f, 0.0f);
+	glVertex3f(1.0f, -1.0f, 0.0f);
+
+	glColor3f(0.6f, 0.0f, 0.5f);
+
+	glVertex3f(-0.2f, 0.2f, 0.0f);
+	glVertex3f(0.7f, 0.2f, 0.0f);
+	glVertex3f(0.7f, -0.5f, 0.0f);
+	glVertex3f(-0.2f, -0.5f, 0.0f);
 
 	glEnd();
 }
@@ -141,7 +148,7 @@ int main()
 		glViewport(0, 0, 600, 600);
 		//establecemos el color de borrado
 		//Valores RGBA
-		glClearColor(0.5, 0.3, 0.9, 1);
+		glClearColor(0.67, 0.84, 1.0, 1);
 		//Borrar!
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
