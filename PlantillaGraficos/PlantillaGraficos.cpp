@@ -14,23 +14,27 @@
 
 using namespace std;
 
-void dibujarPoligono() {
+void dibujarQuads() {
 	glBegin(GL_QUADS);
-	glColor3f(0.4f, 0.9f, 0.0f);
+	glColor3f(0.4f, 0.8f, 0.0f);
 
-	glVertex3f(1.0f, -0.4f, 0.0f);
-	glVertex3f(-1.0f, -0.4f, 0.0f);
+	glVertex3f(1.0f, -0.5f, 0.0f);
+	glVertex3f(-1.0f, -0.5f, 0.0f);
 	glVertex3f(-1.0f, -1.0f, 0.0f);
 	glVertex3f(1.0f, -1.0f, 0.0f);
 
 	glColor3f(0.6f, 0.0f, 0.5f);
 
-	glVertex3f(-0.2f, 0.2f, 0.0f);
-	glVertex3f(0.7f, 0.2f, 0.0f);
-	glVertex3f(0.7f, -0.5f, 0.0f);
-	glVertex3f(-0.2f, -0.5f, 0.0f);
+	glVertex3f(-0.3f, 0.1f, 0.0f);
+	glVertex3f(0.7f, 0.1f, 0.0f);
+	glVertex3f(0.7f, -0.7f, 0.0f);
+	glVertex3f(-0.3f, -0.7f, 0.0f);
 
 	glEnd();
+}
+
+void dibujarPoligono() {
+	
 }
 
 void dibujarTrianguloContinuo() {
@@ -66,7 +70,7 @@ void dibujarTriangulos() {
 	//establecemos el tipo de primitiva
 	glBegin(GL_TRIANGLES);
 	//establecemos color
-	glColor3f(1.0f, 0.0f, 0.5f); 
+	/*glColor3f(1.0f, 0.0f, 0.5f); 
 	//enviar vertices
 	glVertex3f(0.0f, 0.7f, 0.0f);
 	glColor3f(0.0f, 0.0f, 1.0f);
@@ -81,8 +85,14 @@ void dibujarTriangulos() {
 	glVertex3f(0.4f, -0.4f, 0.0f);
 	glVertex3f(-0.4f, -0.4f, 0.0f);
 	glVertex3f(-0.4f, 0.4f, 0.0f);
-	glVertex3f(0.4f, -0.4f, 0.0f);
+	glVertex3f(0.4f, -0.4f, 0.0f);*/
 	//especificar que dejaremos de dibujar
+
+	glColor3f(0.6f, 0.7f, 0.8f);
+
+	glVertex3f(-0.4f, 0.1f, 0.0f);
+
+
 	glEnd();
 }
 
@@ -102,7 +112,8 @@ void dibujarLineas() {
 }
 
 void dibujar() {
-	dibujarPoligono();
+	dibujarQuads();
+	dibujarTriangulos();
 }
 
 int main()
